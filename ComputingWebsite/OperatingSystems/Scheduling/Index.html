@@ -34,6 +34,100 @@
 </ul> 
 </div><!-- End of Menu Div-->
 <div id="MainContent">
+	<div class = "centeredText">
+		<h2>We need to know the pros and cons of the main scheduling algorithms. These are Round Robin, First Come First Serve, Shortest Job First, Shortest Time Remaining and Multi-level Feedback Queue.</h2>
+	</div>
+	<div class="column3" style="background-color:#b3d3d3">
+		<h3>"Round Robin":</h3>
+		<p>In round robin scheduling, processor time is divided equally among all running tasks. Each time period is called a time slice. Each process gets a time slice, and if the process has not finished when this time is up, it stops running and the computer switches to the next process. The process that has been suspended will only be able to resume running when it is next allocated processor time.</p>
+		<div class="column2" style="background-color:#a3d3d3">
+			<ul><h4>Pros:</h4>
+				<li>Ensures that every task is allocated processor time without a long wait.</li>
+			</ul>
+		</div>
+		<div class="column2" style="background-color:#c3d3d3">
+			<ul><h4>Cons:</h4>
+				<li>It does not scale well, because as more processes run, the time slice for each process gets smaller, which means that more urgent tasks are less likely to be completed quickly.</li>
+			</ul>
+		</div>
+	</div>
+	<div class="column3" style="background-color:#d3b3d3">
+		<h3>"First Come, First Server":</h3>
+		</p>In first come, first served scheduling, processes run from start to finish in the order in which the processor receives their request to run. You could compare the first come, first served scheduling algorithm to a queue at a supermarket till — customers are served in the order in which they arrive at the till.</p>
+		<div class="column2" style="background-color:#d3a3d3">
+			<ul><h4>Pros:</h4>
+				<li>This is the simplest method to implement</li>
+				<li>Once a job starts, it will definitely complete(with other scheduling algorithms, starvation may occur ).</li>
+			</ul>
+		</div>
+		<div class="column2" style="background-color:#d3c3d3">
+			<ul><h4>Cons:</h4>
+				<li>The processes run in the order in which the processor receives their request to run, there can be a long wait before a process can run.</li>
+			</ul>
+		</div>
+		<p>In a system that only has a few concurrent processes, first come, first served can work well.</p>
+	</div>
+	<div class="column3" style="background-color:#d3d3b3">
+		<h3>"Shortest Job First":</h3>
+		<p>In shortest job first scheduling, processes are queued and the process that needs the shortest total time to complete goes first. You could compare this a supermarket queue in which the person with the fewest items in their basket is allowed to pay for their goods first.</p>
+		<div class="column2" style="background-color:#d3d3a3">
+			<ul><h4>Pros:</h4>
+				<li>This reduces wait times because shorter processes are removed quickly, which means that the processor can allocate more time to longer jobs.</li>
+			</ul>
+		</div>
+		<div class="column2" style="background-color:#d3d3c3">
+			<ul><h4>Cons:</h4>
+				<li>This type of scheduling is susceptible to starvation if shorter jobs keep being added</li>
+				<li>The scheduler will keep prioritising these jobs, which means that longer processes will not be serviced.</li>
+			</ul>
+		</div>
+	</div>
+	<div class="column3" style="background-color:#b3b3d3">
+		<h3>"Shortest Time Remaining":</h3>
+		<p>In shortest time remaining scheduling, the processes with the shortest time to completion go first, until a different task is added with a shorter time to completion, which then takes priority.</p>
+		<p>This is different to the shortest job first algorithm because a long job which is mostly complete might have a very short time remaining, and would therefore be prioritised.</p>
+		<div class="column2" style="background-color:#a3a3d3">
+			<ul><h4>Pros:</h4>
+				<li>Minimizes the total amount of "lateness" of tasks.</li>
+				<li>In situations where you cannot be late, this optimises for that.</li>
+			</ul>
+		</div>
+		<div class="column2" style="background-color:#c3c3d3">
+			<ul><h4>Cons:</h4>
+				<li>Like shortest job first scheduling, this algorithm also has the effect of delaying longer processes from completing sooner if shorter processes are added in the meantime</li>
+			</ul>
+		</div>
+	</div>
+	<div class="column3" style="background-color:#d3b3b3">
+		<h3>"Multi-level Feedback Queue":</h3>
+		<p>The multi-level feedback queue algorithm uses queues of tasks, where each queue has a different level of priority. Processes are chosen from different queues based on the priority of each queue and how much processing time each process has already had.</p>
+		<div class="column2" style="background-color:#d3a3a3">
+			<ul><h4>Pros:</h4>
+				<li>All tasks are given processor time, but the more important jobs are dealt with sooner.</li>
+				<li>The queues become more balanced the more the tasks are processed, and this ensures that no single high-priority task dominates the processor's time.</li>
+			</ul>
+		</div>
+		<div class="column2" style="background-color:#d3c3c3">
+			<ul><h4>Cons:</h4>
+				<li>Very hard to implement.</li>
+				<li>It's not flexible.</li>
+				<li>It also requires some means of selecting values for all the parameters to define the best scheduler, thus it is also the most complex.</li>
+			</ul>
+		</div>
+	</div>
+	<div class="column3" style="background-color:#b3d3b3">
+		<h3>"Random Order":</h3>
+		<p>This isn't on the specification, but is good to explore.</p>
+		<div class="column2" style="background-color:#a3d3a3">
+			<ul><h4>Pros:</h4>
+				<li>Easy to implement as it requires no parameters about the tasks.</li>
+			</ul>
+		</div>
+		<div class="column2" style="background-color:#c3d3c3">
+			<ul><h4>Cons:</h4>
+			</ul>
+		</div>
+	</div>
 </div><!-- End of Content Div-->
 <div class="clear"> </div>
 <div id="Footer">

@@ -68,7 +68,7 @@ clear : both;
 
 .column3 {
   float: left;
-  width: 30%;
+  width: 32%;
   padding: 10px;
   background-color;
   height: 600px;
@@ -82,8 +82,9 @@ clear : both;
 
 .column2 {
   float: left;
-  width: 44%;
+  width: 45%;
   padding: 10px;
+  height: 300px;
 }
 
 .row:after {
@@ -96,7 +97,13 @@ clear : both;
 	float: left;
 	width: 98.4%;
 	padding: 10px;
-	background-color;
+	background-color
 }
+
+.centeredText {
+	text-align : center;
+	font-size: 150%;
+}
+
 
 
